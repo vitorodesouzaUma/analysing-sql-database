@@ -11,11 +11,12 @@ These instructions will guide you through setting up and running the project on 
 Before running this project, you will need:
 
 - Python installed on your system
-- Access to a PostgreSQL database
+- Access to a PostgreSQL database with permission to read and write data
 - Necessary Python packages installed:
     - pandas
     - matplotlib
-    - Any other packages used in the scripts
+    - psycopg2
+    - Any other packages used in the scripts described in requirements.txt
 
 ### Installation
 
@@ -24,7 +25,7 @@ Before running this project, you will need:
     ```sh
     pip install -r requirements.txt
     ```
-3. Update the `src/config.py` file with your database configuration details.
+3. Create a `config.json` file with your database configuration details based on `config_example.json`
 
 ### Usage
 
@@ -32,28 +33,22 @@ To run the application, use the following command from the terminal:
 
 ```sh
 python app.py [options]
+```
 
-Options include:
+#### Options include:
 
--i or --init: Initiate the project by creating a database, tables, and inserting initial data.
---interact: Interact with the database to generate logs.
--a or --analyze: Analyze the generated logs and produce a report.
-Scripts Overview
+* -i or --init: Initiate the project by creating a database, tables, and inserting initial data.
+* --interact: Interact ramdonly with the database to generate logs.
+* -a or --analyze: Analyze the generated logs and produce a report.
+
+### Scripts Overview
 app.py: The main driver script that parses arguments and calls the respective functionality based on user input.
 analyse.py: Contains functionality to analyze the generated logs from the database and produce a report, including a bar chart visualization of interaction counts.
 interact.py: Interacts with the database to perform various operations and generate logs.
 initiate.py: Handles the initial setup of the database, including creating the database, tables, and necessary functions and triggers.
-Contributing
+
+### Contributing
 If you'd like to contribute to this project, please fork the repository and create a pull request with your features or fixes.
 
-License
+### License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
-
-Acknowledgments
-Your acknowledgments here.
-vbnet
-Copy code
-
-Remember to replace placeholders (like "Your acknowledgments here") with actual content specific to your project. Also, expand on each section with more details as necessary to provide clear instructions and information about your project.
-
-As the project evolves or if you add more scripts or dependencies, make s
