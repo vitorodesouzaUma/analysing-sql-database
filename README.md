@@ -2,6 +2,9 @@
 
 This project includes a set of scripts designed to interact with a PostgreSQL database, generate logs, and analyze the data within the logs. The main components are the `app.py`, `interact.py`, `analyse.py`, and `initiate.py` scripts, each handling different parts of the database interaction and analysis.
 
+![GitHub](https://img.shields.io/github/license/vitorodesouzaUma/analysing-sql-database)
+![GitHub last commit](https://img.shields.io/github/last-commit/vitorodesouzaUma/analysing-sql-database)
+
 ## Getting Started
 
 These instructions will guide you through setting up and running the project on your local machine for development and testing purposes.
